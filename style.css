@@ -1,0 +1,61 @@
+/* Responsive: reducir tamaño de las imágenes en móviles */
+@media (max-width: 640px) {
+    .gallery-container img {
+        transform: scale(0.6) !important;
+        /* reduce al 60% de su tamaño original */
+        max-width: 100% !important;
+        /* evita que se salgan del contenedor */
+        left: 0 !important;
+        /* opcional: centra las imágenes */
+        top: 0 !important;
+        /* opcional: centra las imágenes */
+    }
+
+    .gallery-container {
+        height: auto !important;
+        /* que el contenedor se ajuste a las imágenes */
+        padding: 1rem;
+        /* reduce padding para móviles */
+    }
+
+    .gallery_img {
+        width: 40% !important;
+    }
+
+    .gallery_img1 {
+        left: 0px !important;
+        top: 40px !important;
+
+    }
+
+    .gallery_img2 {
+        left: 50px !important;
+        width: 50% !important;
+        top: -40px !important;
+
+
+    }
+
+    .gallery_img3 {
+        left: 70px !important;
+        top: 120px !important;
+
+    }
+
+    .gallery_img4 {
+        left: 150px !important;
+        top: 40px !important;
+    }
+
+    .gallery_button {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        align-items: flex-start !important;
+    }
+
+    .button-container {
+        top: 10% !important;
+        transform: translateY(-50%) !important;
+    }
+
+}

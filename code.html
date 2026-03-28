@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+<link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta charset="utf-8" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600;800&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-container": "#feb300",
+            "surface-container": "#231e1f",
+            "outline-variant": "#554246",
+            "surface-dim": "#161213",
+            "on-primary": "#660028",
+            "surface-variant": "#383335",
+            "on-primary-container": "#ffa7b7",
+            "inverse-surface": "#eae0e1",
+            "on-secondary-fixed-variant": "#604100",
+            "primary": "#ffb2bf",
+            "on-error-container": "#ffdad6",
+            "on-error": "#690005",
+            "secondary": "#ffd799",
+            "outline": "#a38a90",
+            "on-secondary-fixed": "#281900",
+            "tertiary-container": "#5b32ae",
+            "tertiary": "#d1bcff",
+            "surface": "#161213",
+            "secondary-fixed-dim": "#ffba38",
+            "on-tertiary-fixed-variant": "#5429a7",
+            "on-primary-fixed-variant": "#90003b",
+            "surface-bright": "#3d3839",
+            "surface-container-low": "#1f1a1b",
+            "on-surface-variant": "#dbc0c5",
+            "tertiary-fixed-dim": "#d1bcff",
+            "tertiary-fixed": "#eaddff",
+            "primary-fixed-dim": "#ffb2bf",
+            "on-tertiary-fixed": "#24005b",
+            "on-primary-fixed": "#3f0016",
+            "background": "#161213",
+            "on-secondary": "#432c00",
+            "on-tertiary": "#3d0090",
+            "error-container": "#93000a",
+            "primary-container": "#9d0041",
+            "primary-fixed": "#ffd9de",
+            "surface-container-highest": "#383335",
+            "on-tertiary-container": "#cbb3ff",
+            "error": "#ffb4ab",
+            "secondary-fixed": "#ffdeac",
+            "inverse-primary": "#bc004f",
+            "surface-container-lowest": "#110d0e",
+            "on-background": "#eae0e1",
+            "on-secondary-container": "#6a4800",
+            "surface-tint": "#ffb2bf",
+            "inverse-on-surface": "#342f30",
+            "surface-container-high": "#2d292a",
+            "on-surface": "#eae0e1",
+            "velvet": "#8E244E"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      /* evita scroll horizontal si hay elementos grandes */
+
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24
+    }
+
+    .grain-overlay {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCTLIivmMtIdJy5Dymw052AZA02abWubZxbduo0i28L8bMXezZY-zPFFGyTbiTPt31RU5bv13ACHnMiMrBmJQVNplEvOIlKUVtrS2jgnY1F-0681MHD4aq5dfqrXdrmU3crppnuMRAOzPTfah6_C-1WWetoTb50nGubr9FyQaU4-CZwHcxzdaYdClUCh5D5F5pfBwG0TiWZn1IWFe2Jf_4Xc8KLHX8FZfFKuzActXM_gCar-R15ZuwwL8OCxj_EHqNHjmJsPw-VRYo);
+      opacity: 0.03;
+      pointer-events: none
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+  <div class="fixed inset-0 grain-overlay z-[60]"></div>
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-[#161213]/60 backdrop-blur-xl no-border tonal-shift flat no shadows">
+    <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+      <div class="text-2xl font-headline italic text-[#ffb2bf]" style="font-weight: none;">Chloe Caviar</div>
+      <div class="hidden md:flex items-center space-gap-8 gap-x-8">
+        <a class="font-headline tracking-tight text-display-md text-[#ffb2bf]/70 hover:text-[#ffd799] transition-colors duration-300"
+          href="#">Gallery</a>
+      </div>
+
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-8 pt-20">
+      <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-40 grayscale contrast-125"
+          data-alt="Artistic soft-focus silhouette of a woman in elegant pose, dramatic chiaroscuro lighting with deep embers and warm highlights"
+          src="./chloe_backgorund.png" />
+        <div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+        <div class="absolute inset-0 bg-radial-gradient from-primary-container/5 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl text-center md:text-left md:ml-[-10%]">
+        <p class="font-label text-primary tracking-[0.3em] uppercase mb-6 opacity-80">Between shadows and golden
+          flashes, Chloe Caviar redefines the concept of desire.
+        </p>
+        <h2
+          class="font-headline text-xl md:text-7xl lg:text-8xl font-thin text-on-surface leading-none tracking-tighter mb-8"
+          style="font-weight: none">
+          Chloe <br />
+          <span class="italic text-secondary">Caviar</span>
+        </h2>
+        <p class="font-body font-light text-body-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed"> Chloe
+          Caviar moves between the forbidden and the exquisite, creating a presence that seduces effortlessly and
+          commands without words.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <button
+            class="bg-gradient-to-br from-[#d76b84] to-[#b44f60] text-on-primary font-label font-extrabold text-sm tracking-widest uppercase px-10 py-5 rounded-xl transition-all shadow-lg hover:brightness-110 active:scale-95">
+            Discover my secret...
+          </button>
+
+        </div>
+      </div>
+    </section>
+    <!-- Social Media Ecosystem -->
+    <section class="py-32 px-8 bg-surface">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+          <div class="md:col-span-4 space-y-8">
+            <h2 class="font-headline text-headline-lg italic text-secondary leading-tight">Follow the <br /> Obsession.
+            </h2>
+            <p class="font-body text-body-lg text-outline leading-relaxed">
+              Step closer to luxury, and find yourself deeper in the game—where desire, mystery, and exclusivity blur
+              into something impossible to ignore.
+            </p>
+          </div>
+          <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <!-- Exclusive content -->
+            <!-- OnlyFans -->
+            <a class="group relative aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm transition-transform hover:-translate-y-2 -mt-0"
+              href="https://onlyfans.com/chloecaviar/c7">
+              <img class="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+                data-alt="Close up detail of silk fabric ripples" src="./of_background.jpeg" />
+              <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <img class="w-10 h-10 mb-4" src="./of_icon.png" alt="OnlyFans Logo">
+                <p class="font-label text-on-surface font-bold tracking-widest uppercase">Exclusive Content</p>
+                <p class="text-xs text-gray-300 tracking-tighter mt-1">@chloecaviar</p>
+              </div>
+            </a>
+            <!-- Instagram -->
+            <a class="group relative aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm transition-transform hover:-translate-y-2 sm:mt-12"
+              href="https://www.instagram.com/chloecaviar">
+              <img class="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+                data-alt="Close up detail of silk fabric ripples" src="./ig_background.jpeg" />
+              <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <svg class="w-10 h-10 text-white mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-3a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+                </svg>
+                <p class="font-label text-on-surface font-bold tracking-widest uppercase">Instagram</p>
+                <p class="text-xs text-gray-300 tracking-tighter mt-1">@chloecaviar</p>
+              </div>
+            </a>
+
+            <!-- Telegram -->
+            <a class="group relative aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm transition-transform hover:-translate-y-2 sm:mt-24"
+              href="https://t.me/+ekB9ps92l-Q4MDlk">
+              <img class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                data-alt="Dark aesthetic video still showing vintage film grain" src="tlg_background.jpeg" />
+              <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <img class="w-10 h-10 mb-4" src="./telegram_icon.png" alt="Telegram Logo">
+                <p class="font-label text-on-surface font-bold tracking-widest uppercase">Telegram</p>
+                <p class="text-xs text-gray-300 tracking-tighter mt-1">@chloecaviar</p>
+              </div>
+            </a>
+
+            <!-- X -->
+            <a class="group relative aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm transition-transform hover:-translate-y-2 sm:mt-36"
+              href="https://x.com/chloecaviar1?s=11">
+              <img class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity"
+                data-alt="Abstract aesthetic motion blur" src="./x_background.jpeg" />
+              <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <img class="w-10 h-10 mb-4" src="./x_icon.png" alt="X Logo">
+                <p class="font-label text-on-surface font-bold tracking-widest uppercase">X</p>
+                <p class="text-xs text-gray-300 tracking-tighter mt-1">@chloecaviar1</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Exclusive Gallery Section -->
+    <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="font-headline text-5xl md:text-6xl text-on-surface mb-4">
+            Exclusive <span class="italic text-primary">Gallery</span>
+          </h2>
+          <p class="font-body text-outline max-w-2xl mx-auto">
+            An intimate look at the most exclusive pieces from our editorial collection.
+          </p>
+        </div>
+        <div class="relative w-full max-w-xl mx-auto h-[600px] gallery-mobile">
+          <img
+            class="absolute top-0 left-[-350px] max-w-[340px] object-cover rounded-xl blur-sm opacity-60 transition-transform duration-700 transform rotate-[5deg] scale-[0.98] z-10 gallery_img gallery_img1"
+            src="./blurr.png" />
+          <img
+            class="absolute top-0 left-[-80px] max-w-[420px] object-cover rounded-xl blur-sm opacity-60 transition-transform duration-700 transform rotate-[-14deg] scale-[1] z-20 gallery_img gallery_img2"
+            src="./blurr2.png" />
+          <img
+            class="absolute top-4 left-[180px] max-w-[340px] object-cover rounded-xl blur-sm opacity-60 transition-transform duration-700 transform rotate-[13deg] scale-[1] z-30 gallery_img gallery_img3  "
+            src="./blurr3.png" />
+          <img
+            class="absolute top-4 left-[440px] max-w-[340px] object-cover rounded-xl blur-sm opacity-60 transition-transform duration-700 transform rotate-[-13deg] scale-[1] z-30 gallery_img gallery_img4"
+            src="./blurr4.png" />
+
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-40 button-container">
+            <span class="material-symbols-outlined text-4xl text-secondary mb-4 drop-shadow-lg"
+              style="font-variation-settings: 'FILL' 1;">lock</span>
+            <button
+              class="bg-primary/40 hover:bg-primary/60 text-primary border border-primary/30 font-label text-[10px] tracking-[0.2em] uppercase px-4 py-2 rounded-full backdrop-blur-sm transition-all gallery_button">
+              Keep Watching
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-[#1f1a1b] tonal-shift flat">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+      <div class="text-lg font-headline text-[#ffd799]">Chloe Caviar</div>
+      <div class="flex gap-8">
+        <a class="font-body text-label-md tracking-[0.1em] uppercase text-[#ffb2bf]/50 hover:text-[#ffd799] transition-all"
+          href="#">Privacy Policy</a>
+        <a class="font-body text-label-md tracking-[0.1em] uppercase text-[#ffb2bf]/50 hover:text-[#ffd799] transition-all"
+          href="#">Terms of Service</a>
+        <a class="font-body text-label-md tracking-[0.1em] uppercase text-[#ffb2bf]/50 hover:text-[#ffd799] transition-all"
+          href="#">Contact</a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>
