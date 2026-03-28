@@ -47,15 +47,13 @@
         top: 40px !important;
     }
 
-    .gallery_button {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-        align-items: flex-start !important;
-    }
-
     .button-container {
         top: 10% !important;
         transform: translateY(-50%) !important;
+    }
+
+    .gallery-mobile {
+        height: 250px !important;
     }
 
 }
